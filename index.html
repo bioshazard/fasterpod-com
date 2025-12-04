@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build It Faster — Podcast</title>
+  <meta name="description" content="Build It Faster is a podcast about shipping better products with sharper tools and habits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b1021',
+            accent: '#f3c614',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-ink text-slate-100 antialiased;
+      }
+      a {
+        @apply transition-colors duration-150;
+      }
+    }
+    @layer components {
+      .pill {
+        @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium backdrop-blur;
+      }
+      .link {
+        @apply inline-flex items-center gap-2 text-sm text-slate-200 hover:text-white;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <main class="relative mx-auto flex min-h-screen max-w-4xl flex-col justify-center px-6 py-12">
+    <div class="absolute inset-x-10 -top-32 h-64 rounded-full bg-gradient-to-r from-accent/10 via-white/5 to-accent/10 blur-3xl"></div>
+    <div class="z-10 flex flex-col gap-10">
+      <div class="pill w-fit">
+        <span class="h-2 w-2 rounded-full bg-accent"></span>
+        <span class="tracking-wide text-slate-200">Build It Faster · Weekly drops</span>
+      </div>
+      <header class="flex flex-col gap-6">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Podcast</p>
+        <h1 class="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
+          Ship sharper. <span class="text-accent">Build It Faster</span> is for builders obsessed with speed without losing craft.
+        </h1>
+        <p class="max-w-2xl text-lg text-slate-300">
+          Short, focused episodes on workflows, tools, and habits that keep momentum high. No fluff—just tactics you can use this week.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="pill hover:border-accent/60 hover:text-white" href="https://open.spotify.com" target="_blank" rel="noreferrer">
+            <span class="text-accent">▶</span> Listen on Spotify
+          </a>
+          <a class="pill hover:border-accent/60 hover:text-white" href="https://www.youtube.com" target="_blank" rel="noreferrer">
+            <span class="text-accent">⬤</span> Watch on YouTube
+          </a>
+        </div>
+      </header>
+      <section class="flex flex-wrap items-center gap-4 text-slate-300">
+        <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Follow</span>
+        <a class="link" href="https://twitter.com" target="_blank" rel="noreferrer">
+          <span>↗</span> X
+        </a>
+        <a class="link" href="https://www.tiktok.com" target="_blank" rel="noreferrer">
+          <span>↗</span> TikTok
+        </a>
+        <a class="link" href="https://youtube.com" target="_blank" rel="noreferrer">
+          <span>↗</span> YouTube
+        </a>
+        <a class="link" href="https://open.spotify.com" target="_blank" rel="noreferrer">
+          <span>↗</span> Spotify
+        </a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
