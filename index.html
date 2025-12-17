@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -41,6 +42,9 @@
       .link {
         @apply inline-flex items-center gap-2 text-sm text-slate-200 hover:text-white;
       }
+      .social-link {
+        @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-accent/60 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+      }
     }
   </style>
 </head>
@@ -69,23 +73,32 @@
           </a>
         </div>
       </header>
-      <section class="flex flex-col gap-3 text-slate-300 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+      <section class="flex flex-col gap-3 text-slate-300 sm:flex-row sm:items-center sm:gap-4">
         <span class="text-[0.7rem] uppercase tracking-[0.3em] text-slate-500">Follow</span>
-        <a class="link" href="https://x.com/bifpod" target="_blank" rel="noreferrer">
-          <span>↗</span> X
-        </a>
-        <a class="link" href="https://www.tiktok.com/@builditfaster" target="_blank" rel="noreferrer">
-          <span>↗</span> TikTok
-        </a>
-        <a class="link" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer">
-          <span>↗</span> YouTube
-        </a>
-        <a class="link" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer">
-          <span>↗</span> Spotify
-        </a>
-        <a class="link" href="https://substack.com/@buildfasterpod" target="_blank" rel="noreferrer">
-          <span>↗</span> Substack
-        </a>
+        <div class="flex flex-wrap gap-3">
+          <a class="social-link" href="https://x.com/bifpod" target="_blank" rel="noreferrer" title="X" aria-label="Follow Build It Faster on X">
+            <i class="fa-brands fa-x-twitter text-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span>
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@builditfaster" target="_blank" rel="noreferrer" title="TikTok" aria-label="Follow Build It Faster on TikTok">
+            <i class="fa-brands fa-tiktok text-lg" aria-hidden="true"></i>
+            <span class="sr-only">TikTok</span>
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@BuildFasterPod" target="_blank" rel="noreferrer" title="YouTube" aria-label="Watch Build It Faster on YouTube">
+            <i class="fa-brands fa-youtube text-lg" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span>
+          </a>
+          <a class="social-link" href="https://open.spotify.com/show/28PWQhraVCBTSpbknJ" target="_blank" rel="noreferrer" title="Spotify" aria-label="Listen to Build It Faster on Spotify">
+            <i class="fa-brands fa-spotify text-lg" aria-hidden="true"></i>
+            <span class="sr-only">Spotify</span>
+          </a>
+          <a class="social-link" href="https://substack.com/@buildfasterpod" target="_blank" rel="noreferrer" title="Substack" aria-label="Read Build It Faster on Substack">
+            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 6.75c0-.4.32-.75.75-.75h12.5c.4 0 .75.35.75.75v1.25H5.75A.75.75 0 0 1 5 7.25zm0 3c0-.4.32-.75.75-.75h12.5c.4 0 .75.35.75.75v1.25H5.75A.75.75 0 0 1 5 10.25zm0 3c0-.4.32-.75.75-.75h12.5c.4 0 .75.35.75.75V18l-7 2-7-2z"/>
+            </svg>
+            <span class="sr-only">Substack</span>
+          </a>
+        </div>
       </section>
     </div>
   </main>
